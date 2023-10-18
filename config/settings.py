@@ -99,7 +99,7 @@ JAZZMIN_SETTINGS = {
 
     # Logo to use for your site, must be present in static files, used for brand on top left
     # "site_logo": "static/img/logo.png",
-    
+
     "welcome_sign": "Admin panelga kirish",
     "copyright": "@abdusattor_abdulboqiyev",
 }
