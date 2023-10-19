@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		
+		<title>
+			{% block title %}
+			Rayhon-tour
+			{% endblock title %}
+
+		</title>
+
+		<!-- Loading third party fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+		<link href="{% static 'fonts/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+		<link rel="icon" href="{% static 'img/logo.png' %}">
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="{% static 'style.css' %}">
+
+	</head>
+
+
+	<body>
+		
+		<div class="site-content">
+			<header class="site-header collapsed-nav" data-bg-image="">
+				<div class="container">
+					<div class="header-bar">
+						<a href="{% url 'posts:home_page' %}" class="branding">
+							<img src="{% static 'img/logo.png' %}" class='logo' id='logo_image' alt="Home">
+							{% comment %} <img src="{% static 'images/logo.png' %}" alt="" class="logo"> {% endcomment %}
+							<div class="logo-type">
+								<h1 class="site-title">Rayhon Tour</h1>
+								<small class="site-description">Travel Agency</small>
+							</div>
+						</a>
+
+						<nav class="main-navigation">
+							<button class="menu-toggle"><i class="fa fa-bars"></i></button>
+							<ul class="menu">
+								<li class="menu-item"><a href="contact.html">Bog'lanish</a></li>
+								<li class="menu-item"><a href="{% url 'posts:about' %}">Biz haqimizda</a></li>
+								{% comment %} <li class="menu-item"><a href="projects.html"></a></li> {% endcomment %}
+							</ul>
+						</nav>
+
+						<div class="mobile-navigation"></div>
+					</div>
+				</div>
+			</header>
+
+			<div class="hero">
+				<ul class="slides">
+					<li data-bg-image="{% static 'img/umra3.jpg' %}">
+						<div class="container">
+							<div class="slide-content">
+								<h2 class="slide-title">"Haj va Umra xizmatlari"</h2>
+								<p>Safarda sizga huzur, Xizmatingizda rayhontour !</p>
+								<a href="#" class="button">Ko'proq malumot olish</a>
+							</div>
+						</div>
+					</li>
+					<li data-bg-image="{% static 'img/umra2.jpg' %}">
+						<div class="container">
+							<div class="slide-content">
+								<h2 class="slide-title">"Haj va Umra xizmatlari"</h2>
+								<p>Safarda sizga huzur, Xizmatingizda rayhontour !</p>
+								<a href="#" class="button">Ko'proq malumot olish</a>
+							</div>
+						</div>
+					</li>
+					<li data-bg-image="{% static 'img/arofat1.jpg' %}">
+						<div class="container">
+							<div class="slide-content">
+								<h2 class="slide-title">"Haj va Umra xizmatlari"</h2>
+								<p>Safarda sizga huzur, Xizmatingizda rayhontour !</p>
+								<a href="#" class="button">Ko'proq malumot olish</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			{% block content %}
+			{% endblock content %}
+
+			<footer class="site-footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3">
+							<div class="widget">
+								<h3 class="widget-title">Bizning Manzil</h3>
+								<strong>Rayhon Travel</strong>
+								<address>Namangan Shahar Chorsu dahasi</address>
+								<a href="tel:+998 33 580 55 55">+99833 580 55 55</a><br>
+								<a href="mailto:rayhontour.agency@gmail.com">rayhontour.agency@gmail.com</a>
+							</div>
+						</div>
+
+						<div class="col-md-3">
+							<div class="widget">
+								<h3 class="widget-title">Ijtimoiy Tarmoqlar</h3>
+								<div class="social-links">
+									<a href="https://www.facebook.com/p/RayhonTour-Agency-100089702785319/" target="_blank"><i class="fa fa-facebook"></i></a>
+									<a href="https://www.instagram.com/rayhontour/" target="_blank"><i class="fa fa-instagram"></i></a>
+									<a href="https://t.me/Rayhon_tour" target="_blank"><i class="fa fa-telegram">T</i></a>
+								</div>
+							</div>
+						</div>
+					</div> <!-- .row -->
+
+					<p class="colophon"><a href="{% url 'posts:home_page' %}">2023 RayhonTour</a>. Created by <a href="http://www.abdusattor.uz/" target="_blank">Abdsattor</a></p>
+				</div> <!-- .container -->
+			</footer>
+		</div>
+
+		<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+		<script src="{% static 'js/plugins.js' %}"></script>
+		<script src="{% static 'js/app.js' %}"></script>
+		
+	</body>
+
+</html>
