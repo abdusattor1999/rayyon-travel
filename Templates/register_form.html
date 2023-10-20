@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Sayohatga ro'yxatdan o'tish uchun ariza
+{% endblock title %}
+
+{% block content %}
+<div class="page-head" data-bg-image="{% static 'images/page-head-1.jpg' %}">
+    <header class="site-header collapsed-nav" data-bg-image="">
+        <div class="container">
+            <div class="header-bar">
+                <a href="{% url 'posts:home_page' %}" class="branding">
+                    <img src="{% static 'img/logo_circle.png' %}" class='logo' id='logo_image' alt="Home">
+                    {% comment %} <img src="{% static 'images/logo.png' %}" alt="" class="logo"> {% endcomment %}
+                    <div class="logo-type">
+                        <h1 class="site-title">Rayhon Tour</h1>
+                        <small class="site-description">Travel Agency</small>
+                    </div>
+                </a>
+    
+                <nav class="main-navigation">
+                    <button class="menu-toggle"><i class="fa fa-bars"></i></button>
+                    <ul class="menu">
+                        <li class="menu-item"><a href="{% url 'posts:about' %}">Biz haqimizda</a></li>
+                        <li class="menu-item"><a href="{% url 'posts:contact' %}">Bog'lanish</a></li>
+                        <li class="menu-item"><a href="{% url 'posts:post_list' %}">Yangiliklar</a></li>
+                    </ul>
+                </nav>
+    
+                <div class="mobile-navigation"></div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <h2 class="page-title">Biz haqimizda</h2>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row custom_error_row">
+        <form action="." method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Yuborish">
+            <input type="hidden" class="form-control" name="pk" value="{{pk}}">
+        </form>
+    </div>
+</div>
+
+{% endblock content %}
+

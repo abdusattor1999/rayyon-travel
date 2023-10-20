@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.urls import reverse
+from datetime import datetime
 
 class Travel(models.Model):
     image = models.ImageField(upload_to='travel_images/%B/')
@@ -14,6 +15,9 @@ class Travel(models.Model):
     def __str__(self) -> str:
         return f"{self.departure}: {self.title}"
     
+    def get_departure_info(self):
+        return f"Jo'nash : {self.departure.strftime('%d-%m-%Y')}"
+
     def get_absolute_url(self):
         return reverse("posts:travel_details", kwargs={"pk": self.pk})
     
@@ -31,4 +35,8 @@ class Post(models.Model):
 
     def __str__(self) -> str:
         return f"{self.title} : {self.created_at}"
+    
+    class Meta:
+        verbose_name_plural = "Yangiliklar"
+        verbose_name = "Yangilik"
     

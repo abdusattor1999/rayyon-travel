@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Rayhon - {{post.title | truncatechars:15}}
+{% endblock title %}
+
+{% block content %}
+<div class="page-head" data-bg-image="{% static 'images/page-head-1.jpg' %}">
+    <header class="site-header collapsed-nav" data-bg-image="">
+        <div class="container">
+            <div class="header-bar">
+                <a href="{% url 'posts:home_page' %}" class="branding">
+                    <img src="{% static 'img/logo_circle.png' %}" class='logo' id='logo_image' alt="Home">
+                    <div class="logo-type">
+                        <h1 class="site-title">Rayhon Tour</h1>
+                        <small class="site-description">Travel Agency</small>
+                    </div>
+                </a>
+    
+                <nav class="main-navigation">
+                    <button class="menu-toggle"><i class="fa fa-bars"></i></button>
+                    <ul class="menu">
+                        <li class="menu-item"><a href="{% url 'posts:about' %}">Biz haqimizda</a></li>
+                        <li class="menu-item"><a href="{% url 'posts:contact' %}">Bog'lanish</a></li>
+                        <li class="menu-item"><a href="{% url 'posts:post_list' %}">Yangiliklar</a></li>
+                    </ul>
+                </nav>
+    
+                <div class="mobile-navigation"></div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container hidden_ture">
+        <h2 class="page-title">Biz haqimizda</h2>
+    </div>
+</div>
+{% comment %} Navbar tugadi !!! {% endcomment %}
+
+<div class="container">
+    <div class="row p-5">
+        <h1>{{post.title}}</h1>
+        <img src="{{ post.image.url }}" alt="" class="post_image">
+        <p>{{post.body}}</p>
+        <img src="{{ post.image2.url }}" alt="">
+        <p>{{post.body2}}</p>
+
+        <small>Ko'rilgan : {{post.views}}</small>
+        <hr>
+    </div>
+</div>
+
+{% endblock content %}

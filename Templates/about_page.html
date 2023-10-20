@@ -7,11 +7,36 @@ Rayhon - Biz haqimizda
 
 {% block content %}
 <div class="page-head" data-bg-image="{% static 'images/page-head-1.jpg' %}">
-    <div class="container">
+    <header class="site-header collapsed-nav" data-bg-image="">
+        <div class="container">
+            <div class="header-bar">
+                <a href="{% url 'posts:home_page' %}" class="branding">
+                    <img src="{% static 'img/logo_circle.png' %}" class='logo' id='logo_image' alt="Home">
+                    <div class="logo-type">
+                        <h1 class="site-title">Rayhon Tour</h1>
+                        <small class="site-description">Travel Agency</small>
+                    </div>
+                </a>
+    
+                <nav class="main-navigation">
+                    <button class="menu-toggle"><i class="fa fa-bars"></i></button>
+                    <ul class="menu">
+                        <li class="menu-item"><a href="{% url 'posts:about' %}">Biz haqimizda</a></li>
+                        <li class="menu-item"><a href="{% url 'posts:contact' %}">Bog'lanish</a></li>
+                        <li class="menu-item"><a href="{% url 'posts:post_list' %}">Yangiliklar</a></li>
+                    </ul>
+                </nav>
+    
+                <div class="mobile-navigation"></div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container hidden_ture">
         <h2 class="page-title">Biz haqimizda</h2>
     </div>
 </div>
-
+{% comment %} Navbar tugadi !!! {% endcomment %}
 <main class="main-content">
     <div class="fullwidth-block">
         <div class="container">

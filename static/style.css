@@ -69,6 +69,17 @@ a {
   color: white;
   text-align: left;
 }
+.custom_error_row{
+  padding: 60px 0;
+  align-items: center;
+}
+.custom_error_row h1{
+  font-size: 40px;
+  font-weight: 700;
+}
+.hidden_ture{
+  overflow: hidden;
+}
 h1 {
   font-size: 2em;
   margin: 0.67em 0; }
