@@ -18,8 +18,16 @@ class Travel(models.Model):
     def get_departure_info(self):
         return f"{_('Joʼnash')} : {self.departure.strftime('%d-%m-%Y')}"
 
-    def get_absolute_url(self):
-        return reverse("posts:travel_details", kwargs={"pk": self.pk})
+    def get_first_img(self):
+        return self.image.url if self.image else None
+    
+    def get_second_img(self):
+        return self.image2.url if self.image2 else None
+    
+
+    class Meta:
+        verbose_name_plural = "Sayohatlar"
+        verbose_name = "Sayohat"
     
 class Post(models.Model):
     title = models.CharField(max_length=150, verbose_name=_("Sarlavha"))

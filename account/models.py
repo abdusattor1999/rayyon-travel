@@ -24,3 +24,6 @@ class Commment(models.Model):
     def __str__(self) -> str:
         return self.full_name
     
+    class Meta:
+        verbose_name_plural = "Izohlar"
+        verbose_name = "Izoh"

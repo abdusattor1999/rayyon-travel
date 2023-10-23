@@ -42,24 +42,32 @@ def create(request, id=None):
             all_data = form.cleaned_data
             name = all_data.get("full_name", None)
             phone = all_data.get("phone", None)
-            pk = all_data.get("pk", None)
+            pk = request.POST.get('pk', None)
             travel = Travel.objects.filter(id=pk).last()
-            all_data['travel'] = travel
-            title = "Sayohatga ariza !"
-            msg = f"{travel.title} - {travel.get_departure_info()} Touriga buyurtma"
+            if travel:
+                all_data['travel'] = travel
+                title = "Sayohatga ariza !"
+                msg = f"{travel.title} - {travel.get_departure_info()} Touriga buyurtma"
 
-            try:
-                Customer.objects.create(**all_data)
-                sendSimpleEmail(
-                title, name, msg, phone
-                )
-            except:
-                pass
-            context = {
-                'success':True,
-                "status":200,
-                "message":_("Arizangiz yuborildi tez orada aloqaga chiqamiz !")
-            }
+                try:
+                    Customer.objects.create(**all_data)
+                    sendSimpleEmail(
+                    title, name, msg, phone
+                    )
+                except:
+                    pass
+            
+                context = {
+                    'success':True,
+                    "status":200,
+                    "message":_("Arizangiz yuborildi tez orada aloqaga chiqamiz !")
+                }
+            else:
+                context = {
+                    'success':False,
+                    "status":404,
+                    "message":_(f"Berilgan {pk} id raqamli obyekt mavjud emas !")
+                }
             return render(request, "notifications.html", context)
     else:
         context = {

@@ -42,9 +42,12 @@
 <div class="container post_details_page">
     <div class="row p-5">
         <h1>{% translate post.title %}</h1>
-        <img src="{{ post.image.url }}" alt="" class="post_image">
+        {% if post.get_first_image is not None %}
+            <img src="{{ post.get_first_img }}" alt="" class="post_image">
+        {% endif %}
+
         <p>{% translate post.body %}</p>
-        <img src="{{ post.image2.url }}" alt="" class="post_image">
+        <img src="{{ post.get_second_img }}" alt="" class="post_image">
         <p>{% translate post.body2 %}</p>
         <br>
         <small>{% translate "Ko'rishlar" %} : {{post.views}}</small>
