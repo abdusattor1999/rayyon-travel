@@ -91,7 +91,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'OPTIONS': {
-            'service': 'my_service',
+            'service': 'my_service.conf',
             'passfile': '.my_pgpass',
         },
         # 'USER': 'rayhonto_db_user',
