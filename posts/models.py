@@ -18,9 +18,11 @@ class Travel(models.Model):
     def get_departure_info(self):
         return f"{_('Joʼnash')} : {self.departure.strftime('%d-%m-%Y')}"
 
+    @property
     def get_first_img(self):
         return self.image.url if self.image else None
     
+    @property
     def get_second_img(self):
         return self.image2.url if self.image2 else None
     
