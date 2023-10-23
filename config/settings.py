@@ -90,15 +90,15 @@ DATABASES = {
     # }
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'OPTIONS': {
-            'service': 'my_service',
-            'passfile': '.my_pgpass',
-        },
-        # 'USER': 'rayhonto_db_user',
-        # 'PASSWORD': 'j{WJ_^q$$oiO',
-        # 'DATABASE': 'rayhonto_db',
-        # 'HOST': 'localhost',
-        # 'PORT': 5432,
+        # 'OPTIONS': {
+        #     'service': 'my_service',
+        #     'passfile': '.my_pgpass',
+        # },
+        'NAME': 'rayhonto_db',
+        'USER': 'rayhonto_db_user',
+        'PASSWORD': 'j{WJ_^q$$oiO',
+        'HOST': 'localhost',
+        'PORT': 5432,
     }
 }
 
