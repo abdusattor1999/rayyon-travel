@@ -1,0 +1,17 @@
+---
+deploy:
+  tasks:
+    - export DEPLOYPATH=~/public_html/config
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/cp -r * $DEPLOYPATH
+    - cd $DEPLOYPATH
+    - /usr/local/bin/python3 -m venv venv
+    - source venv/bin/activate
+    - /usr/local/bin/pip install -r requirements.txt
+    - /usr/local/bin/python manage.py collectstatic --noinput
+    - /usr/local/bin/python manage.py migrate
+    - /usr/local/bin/python manage.py loaddata fixtures.json
+    - /usr/local/bin/python manage.py compress
+    - /usr/local/bin/python manage.py compilemessages
+    - /usr/local/bin/python manage.py update_index
+    - /bin/chmod -R 755 $DEPLOYPATH
