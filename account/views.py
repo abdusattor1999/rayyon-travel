@@ -38,15 +38,16 @@ def create(request, id=None):
     if request.method == "POST":
         form = CustomerForm(data=request.POST)
 
-        if form.is_valid():
-            
+        if form.is_valid(): 
             all_data = form.cleaned_data
             name = all_data.get("full_name", None)
             phone = all_data.get("phone", None)
-            travel = Travel.objects.filter(id=id).last()
+            pk = all_data.get("pk", None)
+            travel = Travel.objects.filter(id=pk).last()
             all_data['travel'] = travel
             title = "Sayohatga ariza !"
             msg = f"{travel.title} - {travel.get_departure_info()} Touriga buyurtma"
+
             try:
                 Customer.objects.create(**all_data)
                 sendSimpleEmail(
