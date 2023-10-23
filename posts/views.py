@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Travel, Post
-from account.models import Customer
+from account.models import Commment
 from account.utils import sendSimpleEmail
 from django.utils.translation import gettext as _
 from django.utils.translation import get_language, activate, gettext
@@ -36,7 +36,7 @@ def contact(request):
             }
             return render(request, 'notifications.html', context)
         else:
-            Customer.objects.create(
+            Commment.objects.create(
                 full_name=full_name,
                 phone=phone,
                 comment=comment
@@ -45,9 +45,12 @@ def contact(request):
             name = full_name
             phone = phone
             msg = comment
-            sendSimpleEmail(
-                title, name, msg, phone
-            )
+            try:
+                sendSimpleEmail(
+                    title, name, msg, phone
+                )
+            except:
+                pass
             context = {
                 'success':True,
                 "status":200,

@@ -5,7 +5,7 @@ from posts.models import Travel
 from django.utils.translation import gettext as _
 from django.contrib.auth import authenticate, login
 from .forms import LoginForm
-
+from account.models import Customer
 
 def login_view(request):
     if request.method == 'POST':
@@ -39,19 +39,21 @@ def create(request, id=None):
         form = CustomerForm(data=request.POST)
 
         if form.is_valid():
-            form.save()
+            
             all_data = form.cleaned_data
             name = all_data.get("full_name", None)
             phone = all_data.get("phone", None)
-            pk = request.POST.get('pk')
-            travel = Travel.objects.filter(id=pk).last()
+            travel = Travel.objects.filter(id=id).last()
+            all_data['travel'] = travel
             title = "Sayohatga ariza !"
             msg = f"{travel.title} - {travel.get_departure_info()} Touriga buyurtma"
-
-
-            sendSimpleEmail(
+            try:
+                Customer.objects.create(**all_data)
+                sendSimpleEmail(
                 title, name, msg, phone
-            )
+                )
+            except:
+                pass
             context = {
                 'success':True,
                 "status":200,
