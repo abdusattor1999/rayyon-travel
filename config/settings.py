@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rosetta',
     # internal
+    "corsheaders",
     'account',
     'posts',
 
@@ -48,8 +50,9 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.locale.LocaleMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -122,16 +125,26 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    "https://fa3a-213-230-76-94.ngrok-free.app",
+    "https://www.rayhontour.uz"
+]
+CSRF_TRUSTED_ORIGINS = [
+    "https://fa3a-213-230-76-94.ngrok-free.app",
+    "https://www.rayhontour.uz"
+]
+
+# CORS_ALLOW_ALL_ORIGINS=True
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-from django.utils.translation import ugettext as _
+from django.utils.translation import gettext_lazy as _
 LANGUAGES = [
-    ('en', _('English')),
+    ('uz', _("O'zbek")),
     ('ru', _('Russian'))
 ]
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'uz'
 
 TIME_ZONE = 'Asia/Tashkent'
 
@@ -140,13 +153,10 @@ USE_I18N = True
 USE_TZ = True
 
 
-LOCALE_PATH = [
-    BASE_DIR / 'locale/',
-]
+LOCALE_PATHS = os.path.join(BASE_DIR, "locale/"),
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
-import os
 STATIC_URL = 'static/'
 STATIC_DIRS = [str(BASE_DIR.joinpath('static'))]
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static/')]

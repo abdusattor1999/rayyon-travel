@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %}
 
 {% block title %}
-Rayhon - {{post.title | truncatechars:15}}
+{% translate "Rayhon" %} - {{post.title | truncatechars:15}} 
 {% endblock title %}
 
 {% block content %}
@@ -14,16 +15,16 @@ Rayhon - {{post.title | truncatechars:15}}
                     <img src="{% static 'img/logo_circle.png' %}" class='logo' id='logo_image' alt="Home">
                     <div class="logo-type">
                         <h1 class="site-title">Rayhon Tour</h1>
-                        <small class="site-description">Travel Agency</small>
+                        <small class="site-description">{% translate "Travel Agency" %}</small>
                     </div>
                 </a>
     
                 <nav class="main-navigation">
                     <button class="menu-toggle"><i class="fa fa-bars"></i></button>
                     <ul class="menu">
-                        <li class="menu-item"><a href="{% url 'posts:about' %}">Biz haqimizda</a></li>
-                        <li class="menu-item"><a href="{% url 'posts:contact' %}">Bog'lanish</a></li>
-                        <li class="menu-item"><a href="{% url 'posts:post_list' %}">Yangiliklar</a></li>
+                        <li class="menu-item"><a href="{% url 'posts:about' %}">{% translate "Biz haqimizda" %}</a></li>
+                        <li class="menu-item"><a href="{% url 'posts:contact' %}">{% translate "Bog'lanish" %}</a></li>
+                        <li class="menu-item"><a href="{% url 'posts:post_list' %}">{% translate "Yangiliklar" %}</a></li>
                     </ul>
                 </nav>
     
@@ -33,20 +34,20 @@ Rayhon - {{post.title | truncatechars:15}}
     </header>
     
     <div class="container hidden_ture">
-        <h2 class="page-title">Biz haqimizda</h2>
+        <h2 class="page-title">Biz</h2>
     </div>
 </div>
 {% comment %} Navbar tugadi !!! {% endcomment %}
 
-<div class="container">
+<div class="container post_details_page">
     <div class="row p-5">
-        <h1>{{post.title}}</h1>
+        <h1>{% translate post.title %}</h1>
         <img src="{{ post.image.url }}" alt="" class="post_image">
-        <p>{{post.body}}</p>
-        <img src="{{ post.image2.url }}" alt="">
-        <p>{{post.body2}}</p>
-
-        <small>Ko'rilgan : {{post.views}}</small>
+        <p>{% translate post.body %}</p>
+        <img src="{{ post.image2.url }}" alt="" class="post_image">
+        <p>{% translate post.body2 %}</p>
+        <br>
+        <small>{% translate "Ko'rishlar" %} : {{post.views}}</small>
         <hr>
     </div>
 </div>

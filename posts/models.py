@@ -16,7 +16,7 @@ class Travel(models.Model):
         return f"{self.departure}: {self.title}"
     
     def get_departure_info(self):
-        return f"Jo'nash : {self.departure.strftime('%d-%m-%Y')}"
+        return f"{_('Joʼnash')} : {self.departure.strftime('%d-%m-%Y')}"
 
     def get_absolute_url(self):
         return reverse("posts:travel_details", kwargs={"pk": self.pk})

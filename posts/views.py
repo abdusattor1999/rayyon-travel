@@ -2,11 +2,22 @@ from django.shortcuts import render
 from .models import Travel, Post
 from account.models import Customer
 from account.utils import sendSimpleEmail
+from django.utils.translation import gettext as _
+from django.utils.translation import get_language, activate, gettext
+
 
 def home_page(request):
     travels = Travel.objects.filter(active=True).order_by("-id")[:4]
+    # trans = translate('ru')
     return render(request, "home_page.html", {"travels":travels})
 
+# def translate(language):
+#     cur_lang = get_language()
+#     try:
+#         activate(language)
+#     finally:
+#         activate(cur_lang)
+    
 
 def about(request):
     return render(request, 'about_page.html')
@@ -21,7 +32,7 @@ def contact(request):
             context = {
                 "success":False,
                 "status":400,
-                "message":"'Ism-Familiya' va 'Telefon' kiritilishi kerak !"
+                "message":_("'Ism-Familiya' va 'Telefon' kiritilishi kerak !")
             }
             return render(request, 'notifications.html', context)
         else:
@@ -58,7 +69,7 @@ def post_details(request, pk):
     else:
         data = {
             "success":False,
-            "message":"Berilgan ID raqamli Yangilik mavjud emas !",
+            "message":_("Berilgan ID raqamli Yangilik mavjud emas !"),
             "status":400
         }
         return render(request, "notifications.html", data)

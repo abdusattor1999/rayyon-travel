@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %}
 
 {% block title %}
 {% if success == True %}
-Muvaffaqiyatli
+{% translate "Muvaffaqiyatli" %}
 {% else %}
-Xatolik...
+{% translate "Xatolik..." %}
 {% endif %}
 {% endblock title %}
 
@@ -20,16 +21,16 @@ Xatolik...
                     {% comment %} <img src="{% static 'images/logo.png' %}" alt="" class="logo"> {% endcomment %}
                     <div class="logo-type">
                         <h1 class="site-title">Rayhon Tour</h1>
-                        <small class="site-description">Travel Agency</small>
+                        <small class="site-description">{% translate "Travel Agency" %}</small>
                     </div>
                 </a>
     
                 <nav class="main-navigation">
                     <button class="menu-toggle"><i class="fa fa-bars"></i></button>
                     <ul class="menu">
-                        <li class="menu-item"><a href="{% url 'posts:about' %}">Biz haqimizda</a></li>
-                        <li class="menu-item"><a href="{% url 'posts:contact' %}">Bog'lanish</a></li>
-                        <li class="menu-item"><a href="{% url 'posts:post_list' %}">Yangiliklar</a></li>
+                        <li class="menu-item"><a href="{% url 'posts:about' %}">{% translate "Biz haqimizda" %}</a></li>
+                        <li class="menu-item"><a href="{% url 'posts:contact' %}">{% translate "Bog'lanish" %}</a></li>
+                        <li class="menu-item"><a href="{% url 'posts:post_list' %}">{% translate "Yangiliklar" %}</a></li>
                     </ul>
                 </nav>
     
@@ -39,7 +40,7 @@ Xatolik...
     </header>
     
     <div class="container hidden_ture">
-        <h2 class="page-title">Bildirishnoma</h2>
+        <h2 class="page-title">{% translate "Bildirishnoma" %}</h2>
     </div>
 </div>
 
@@ -47,7 +48,7 @@ Xatolik...
 <div class="container">
     <div class="row custom_error_row">
         {% if status == 400 %}
-        <h1>Xatolik : {{status}}</h1>
+        <h1>{% translate "Xatolik" %} : {{status}}</h1>
         {% endif %}
         <h2>{{message}}</h2>
     </div>

@@ -3,7 +3,7 @@
 {% load i18n %}
 
 {% block title %}
-Sayohatga ro'yxatdan o'tish uchun ariza
+{% translate "Tizimga kirish" %}
 {% endblock title %}
 
 {% block content %}
@@ -13,7 +13,6 @@ Sayohatga ro'yxatdan o'tish uchun ariza
             <div class="header-bar">
                 <a href="{% url 'posts:home_page' %}" class="branding">
                     <img src="{% static 'img/logo_circle.png' %}" class='logo' id='logo_image' alt="Home">
-                    {% comment %} <img src="{% static 'images/logo.png' %}" alt="" class="logo"> {% endcomment %}
                     <div class="logo-type">
                         <h1 class="site-title">Rayhon Tour</h1>
                         <small class="site-description">{% translate "Travel Agency" %}</small>
@@ -34,21 +33,26 @@ Sayohatga ro'yxatdan o'tish uchun ariza
         </div>
     </header>
     
-    <div class="container">
-        <h2 class="page-title">{% translate "Ro'yxat" %}</h2>
+    <div class="container hidden_ture">
+        <h2 class="page-title">{% translate "Bog'lanish" %}</h2>
     </div>
 </div>
-
-<div class="container">
-    <div class="row custom_error_row">
-        <form action="." method="post">
+{% comment %}  {% endcomment %}
+<div class="container p-3">
+    <div class="row pt-5">
+        <form action="." class="form-group p-5 row" method="post">
             {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value="{% translate 'Yuborish' %}">
-            <input type="hidden" class="form-control" name="pk" value="{{pk}}">
+            {{form.as_p}}
+            {% comment %} <input type="text" class="form-control mb-3" name='username', placeholder="Username">
+            <input type="password" class="form-control mb-3" name="password" id="" placeholder="Parol">
+                {% endcomment %}
+            <input type="submit" value="{% translate 'Tizimga kirish' %}" class='btn btn-primary  py-2 px-5'>
+        
         </form>
     </div>
 </div>
 
 {% endblock content %}
+
+
 

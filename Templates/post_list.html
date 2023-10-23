@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %}
 
 {% block title %}
-Rayhon - Yangiliklar
+{% translate "Rayhon - Yangiliklar" %}
 {% endblock title %}
 
 {% block content %}
@@ -14,16 +15,16 @@ Rayhon - Yangiliklar
                     <img src="{% static 'img/logo_circle.png' %}" class='logo' id='logo_image' alt="Home">
                     <div class="logo-type">
                         <h1 class="site-title">Rayhon Tour</h1>
-                        <small class="site-description">Travel Agency</small>
+                        <small class="site-description">{% translate "Travel Agency" %}</small>
                     </div>
                 </a>
     
                 <nav class="main-navigation">
                     <button class="menu-toggle"><i class="fa fa-bars"></i></button>
                     <ul class="menu">
-                        <li class="menu-item"><a href="{% url 'posts:about' %}">Biz haqimizda</a></li>
-                        <li class="menu-item"><a href="{% url 'posts:contact' %}">Bog'lanish</a></li>
-                        <li class="menu-item"><a href="{% url 'posts:post_list' %}">Yangiliklar</a></li>
+                        <li class="menu-item"><a href="{% url 'posts:about' %}">{% translate "Biz haqimizda" %}</a></li>
+                        <li class="menu-item"><a href="{% url 'posts:contact' %}">{% translate "Bog'lanish" %}</a></li>
+                        <li class="menu-item"><a href="{% url 'posts:post_list' %}">{% translate "Yangiliklar" %}</a></li>
                     </ul>
                 </nav>
     
@@ -33,22 +34,22 @@ Rayhon - Yangiliklar
     </header>
     
     <div class="container hidden_ture">
-        <h2 class="page-title">Biz haqimizda</h2>
+        <h2 class="page-title">{% translate "Biz" %}</h2>
     </div>
 </div>
 {% comment %} Navbar tugadi !!! {% endcomment %}
 
 <div class="fullwidth-block" data-bg-color="#edf2f4">
     <div class="container">
-        <h2 class="section-title">Yangiliklar</h2>
+        <h2 class="section-title">{% translate "Yangiliklar" %}</h2>
         <div class="row">
             {% for post in news %}
                 <div class="col-md-4">
                     <div class="post">
                         <figure class="featured-image"><img src="{{ post.image.url }}" alt=""></figure>
-                        <h2 class="entry-title"><a href="{% url 'posts:post_details' post.id %}">{{post.title}}</a></h2>
+                        <h2 class="entry-title"><a href="{% url 'posts:post_details' post.id %}">{% translate post.title %}</a></h2>
                         <small class="date">{{post.created_at}}</small>
-                        <p>{{post.body | truncatechars:50}}</p>
+                        <p>{% translate post.body %} | truncatechars:50</p>
                     </div>
                 </div>
             {% endfor %}

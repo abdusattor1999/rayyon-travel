@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %}
 
 {% block title %}
-Rayhon - Biz haqimizda
+{% translate "Rayhon - Biz haqimizda" %}
 {% endblock title %}
 
 {% block content %}
@@ -14,16 +15,16 @@ Rayhon - Biz haqimizda
                     <img src="{% static 'img/logo_circle.png' %}" class='logo' id='logo_image' alt="Home">
                     <div class="logo-type">
                         <h1 class="site-title">Rayhon Tour</h1>
-                        <small class="site-description">Travel Agency</small>
+                        <small class="site-description">{% translate "Travel Agency" %}</small>
                     </div>
                 </a>
     
                 <nav class="main-navigation">
                     <button class="menu-toggle"><i class="fa fa-bars"></i></button>
                     <ul class="menu">
-                        <li class="menu-item"><a href="{% url 'posts:about' %}">Biz haqimizda</a></li>
-                        <li class="menu-item"><a href="{% url 'posts:contact' %}">Bog'lanish</a></li>
-                        <li class="menu-item"><a href="{% url 'posts:post_list' %}">Yangiliklar</a></li>
+                        <li class="menu-item"><a href="{% url 'posts:about' %}">{% translate "Biz haqimizda" %}</a></li>
+                        <li class="menu-item"><a href="{% url 'posts:contact' %}">{% translate "Bog'lanish" %}</a></li>
+                        <li class="menu-item"><a href="{% url 'posts:post_list' %}">{% translate "Yangiliklar" %}</a></li>
                     </ul>
                 </nav>
     
@@ -33,7 +34,7 @@ Rayhon - Biz haqimizda
     </header>
     
     <div class="container hidden_ture">
-        <h2 class="page-title">Biz haqimizda</h2>
+        <h2 class="page-title">Biz</h2>
     </div>
 </div>
 {% comment %} Navbar tugadi !!! {% endcomment %}
@@ -41,20 +42,20 @@ Rayhon - Biz haqimizda
     <div class="fullwidth-block">
         <div class="container">
             <div class="row d-flex p-2">
-                <h2 class="section-title">Nima uchun aynan biz ?</h2>
+                <h2 class="section-title">{% translate "Nima uchun aynan biz ?" %}</h2>
                 <div class="col-md-10">
                     <ol class="circle">
                         <li>
-                            <h3>Tajribali mutaxassislardan iborat jamoa</h3>
-                            <p>Jamoamiz Umra sayohatining nozik tomonlarini chuqur tushunadi. Biz sizga sayohatingizning har bir bosqichida mutaxassis ko'rsatmalari va yordamini taqdim etamiz.</p>
+                            <h3>{% translate "Tajribali mutaxassislardan iborat jamoa" %}</h3>
+                            <p>{% translate "Jamoamiz Umra sayohatining nozik tomonlarini chuqur tushunadi. Biz sizga sayohatingizning har bir bosqichida mutaxassis ko'rsatmalari va yordamini taqdim etamiz." %}</p>
                         </li>
                         <li>
-                            <h3>Moslashtirilgan paketlar</h3>
-                            <p>Biz sizning maxsus ehtiyojlaringiz va hoxishlaringizni qondirish uchun mo'ljallangan bir qator Umra paketlarini taklif qilamiz. Byudjetga mos variantnimi yoki hashamatlini qidirasizmi bu sizning tanlovingiz.</p>
+                            <h3>{% translate "Moslashtirilgan paketlar" %}</h3>
+                            <p>{% translate "Biz sizning maxsus ehtiyojlaringiz va hoxishlaringizni qondirish uchun mo'ljallangan bir qator Umra paketlarini taklif qilamiz. Byudjetga mos variantnimi yoki hashamatlini qidirasizmi bu sizning tanlovingiz." %}</p>
                         </li>
                         <li>
-                            <h3>Mijozlarga yo'naltirilgan yondashuv:</h3>
-                            <p>Sizning mamnunligingiz bizning ustuvor vazifamizdir. Umra tajribangiz nafaqat silliq, balki ma’naviy jihatdan ham ko‘tarinki bo‘lishini ta’minlash uchun qo‘shimcha milyani bosib o‘tamiz.</p>
+                            <h3>{% translate "Mijozlarga yo'naltirilgan yondashuv" %}</h3>
+                            <p>{% translate "Sizning mamnunligingiz bizning ustuvor vazifamizdir. Umra tajribangiz nafaqat silliq, balki ma’naviy jihatdan ham ko‘tarinki bo‘lishini ta’minlash uchun qo‘shimcha milyani bosib o‘tamiz." %}</p>
                         </li>
                     </ol>
                 </div>
@@ -68,26 +69,24 @@ Rayhon - Biz haqimizda
             <div class="row">
                 <div class="col-md-6">
                     <div class="checked-box">
-                        <h3>Bizning majburiyatimiz</h3>
-                        <p>Rayhon tourda biz halollik, shaffoflik va mijozlar ehtiyojini qondirishga sodiqligimizdan faxrlanamiz. Biz barcha qoidalar va standartlarga rioya qilamiz va bizning maqsadimiz biz yordam bergan har bir ibodatda sizning kutganingizdan oshig'ini berish.</p>
+                        <h3>{% translate "Rayhon tourga xush kelibsiz" %}</h3>
+                        <p>{% translate "Muqaddas Umra safarini amalga oshirishdagi ishonchli hamkoringiz Rayhon tourga xush kelibsiz. Mukammallikka bo'lgan ishtiyoq va xizmatga sodiqlik bilan biz Umra tajribangizni chinakam esda qolarli qilish uchun harakat qilamiz." %}</p>
                     </div>
-
                     <div class="checked-box">
-                        <h3>Sifatli turar joy</h3>
-                        <p>Biz Harami Sharif yaqinidagi eng yaxshi mehmonxonalar bilan hamkorlik qilib, ziyoratingiz davomida shinam va qulay yashashingizni ta'minlaymiz.</p>
+                        <h3>{% translate "Bizning majburiyatimiz" %}</h3>
+                        <p>{% translate "Rayhon tourda biz halollik, shaffoflik va mijozlar ehtiyojini qondirishga sodiqligimizdan faxrlanamiz. Biz barcha qoidalar va standartlarga rioya qilamiz va bizning maqsadimiz biz yordam bergan har bir ibodatda sizning kutganingizdan oshig'ini berish." %}</p>
                     </div>
-
                 </div>
 
                 <div class="col-md-6">
                     <div class="checked-box">
-                        <h3>Rayhon tourga xush kelibsiz</h3>
-                        <p>Muqaddas Umra safarini amalga oshirishdagi ishonchli hamkoringiz Rayhon tourga xush kelibsiz. Mukammallikka bo'lgan ishtiyoq va xizmatga sodiqlik bilan biz Umra tajribangizni chinakam esda qolarli qilish uchun harakat qilamiz.</p>
+                        <h3>{% translate "Sifatli turar joy" %}</h3>
+                        <p>{% translate "Biz Harami Sharif yaqinidagi eng yaxshi mehmonxonalar bilan hamkorlik qilib, ziyoratingiz davomida shinam va qulay yashashingizni ta'minlaymiz." %}</p>
                     </div>
 
                     <div class="checked-box">
-                        <h3>Ma'naviy yo'l-yo'riq</h3>
-                        <p>Bizning jamoamiz sayohatingiz davomida ma'naviy yo'l-yo'riq ko'rsatish, Umra marosimlarini fidoyilik va tushunish bilan bajarishingizga yordam berishga harakat qiladi.</p>
+                        <h3>{% translate "Ma'naviy yo'l-yo'riq" %}</h3>
+                        <p>{% translate "Bizning jamoamiz sayohatingiz davomida ma'naviy yo'l-yo'riq ko'rsatish, Umra marosimlarini fidoyilik va tushunish bilan bajarishingizga yordam berishga harakat qiladi." %}</p>
                     </div>
                 </div>
             </div>

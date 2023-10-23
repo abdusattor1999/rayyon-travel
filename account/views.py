@@ -1,7 +1,38 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import CustomerForm
 from.utils import sendSimpleEmail
 from posts.models import Travel
+from django.utils.translation import gettext as _
+from django.contrib.auth import authenticate, login
+from .forms import LoginForm
+
+
+def login_view(request):
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            cd = form.cleaned_data
+            user = authenticate(request, username=cd['username'], password=cd['password'])
+            if user is not None:
+                login(request, user)
+                return redirect('posts:home_page')
+            else:
+                context = {
+                'success' : False,
+                'message' : "Berilgan malumotlar bo'yicha Foydalanuvchi profili topilmadi \"Username\" yoki \"Parol\" xato bo'lishi mumkin tekshirib qaytadan kiriting !",
+                }
+                return render(request, 'notifications.html', context)
+            
+        else:
+            context = {
+            'success' : False,
+            'message' : "Berilgan malumotlar bo'yicha Foydalanuvchi profili topilmadi \"Username\" yoki \"Parol\" xato bo'lishi mumkin tekshirib qaytadan kiriting !",
+            }
+            return render(request, 'notifications.html', context)
+        
+    else:
+        form = LoginForm()
+        return render(request, 'login_form.html', {'form':form})
 
 def create(request, id=None):
     if request.method == "POST":
@@ -24,7 +55,7 @@ def create(request, id=None):
             context = {
                 'success':True,
                 "status":200,
-                "message":"Arizangiz yuborildi tez orada aloqaga chiqamiz !"
+                "message":_("Arizangiz yuborildi tez orada aloqaga chiqamiz !")
             }
             return render(request, "notifications.html", context)
     else:
@@ -33,3 +64,6 @@ def create(request, id=None):
             "form":CustomerForm()
         }
         return render(request, "register_form.html", context)
+
+def private_page(request):
+    return render(request, 'kabinet.html')

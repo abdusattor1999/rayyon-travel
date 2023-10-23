@@ -3,7 +3,7 @@
 {% load i18n %}
 
 {% block title %}
-Rayhon - Bosh Sahifa
+{% translate "Rayhon - Bosh Sahifa" %}
 {% endblock title %}
 
 {% block content %}
@@ -16,16 +16,16 @@ Rayhon - Bosh Sahifa
                 {% comment %} <img src="{% static 'images/logo.png' %}" alt="" class="logo"> {% endcomment %}
                 <div class="logo-type">
                     <h1 class="site-title">Rayhon Tour</h1>
-                    <small class="site-description">Travel Agency</small>
+                    <small class="site-description">{% translate "Travel Agency" %}</small>
                 </div>
             </a>
 
             <nav class="main-navigation">
                 <button class="menu-toggle"><i class="fa fa-bars"></i></button>
                 <ul class="menu">
-                    <li class="menu-item"><a href="{% url 'posts:about' %}">Biz haqimizda</a></li>
-                    <li class="menu-item"><a href="{% url 'posts:contact' %}">Bog'lanish</a></li>
-                    <li class="menu-item"><a href="{% url 'posts:post_list' %}">Yangiliklar</a></li>
+                    <li class="menu-item"><a href="{% url 'posts:about' %}">{% translate "Biz haqimizda" %}</a></li>
+                    <li class="menu-item"><a href="{% url 'posts:contact' %}">{% translate "Bog'lanish" %}</a></li>
+                    <li class="menu-item"><a href="{% url 'posts:post_list' %}">{% translate "Yangiliklar" %}</a></li>
                 </ul>
             </nav>
 
@@ -39,27 +39,24 @@ Rayhon - Bosh Sahifa
         <li data-bg-image="{% static 'img/umra3.jpg' %}">
             <div class="container">
                 <div class="slide-content">
-                    <h2 class="slide-title">"Haj va Umra xizmatlari"</h2>
-                    <p>Safarda sizga huzur, Xizmatingizda rayhontour !</p>
-                    {% comment %} <a href="#" class="button">Ko'proq malumot olish</a> {% endcomment %}
+                    <h2 class="slide-title">{% translate "Umra ziyoratlari biz bilan qulay" %}</h2>
+                    <p>{% translate "Safarda sizga huzur, xizmatingizda Rayhontour !" %}</p>
                 </div>
             </div>
         </li>
         <li data-bg-image="{% static 'img/umra2.jpg' %}">
             <div class="container">
                 <div class="slide-content">
-                    <h2 class="slide-title">"Haj va Umra xizmatlari"</h2>
-                    <p>Safarda sizga huzur, Xizmatingizda rayhontour !</p>
-                    {% comment %} <a href="#" class="button">Ko'proq malumot olish</a> {% endcomment %}
+                    <h2 class="slide-title">{% translate "Umra ziyoratlari biz bilan qulay" %}</h2>
+                    <p>{% translate "Safarda sizga huzur, xizmatingizda Rayhontour !" %}</p>
                 </div>
             </div>
         </li>
         <li data-bg-image="{% static 'img/arofat1.jpg' %}">
             <div class="container">
                 <div class="slide-content">
-                    <h2 class="slide-title">"Haj va Umra xizmatlari"</h2>
-                    <p>Safarda sizga huzur, Xizmatingizda rayhontour !</p>
-                    {% comment %} <a href="#" class="button">Ko'proq malumot olish</a> {% endcomment %}
+                    <h2 class="slide-title">{% translate "Umra ziyoratlari biz bilan qulay" %}</h2>
+                    <p>{% translate "Safarda sizga huzur, xizmatingizda Rayhontour !" %}</p>
                 </div>
             </div>
         </li>
@@ -74,10 +71,10 @@ Rayhon - Bosh Sahifa
                 <div class="col-md-3 col-sm-6">
                     <div class="feature">
                         <img src="{{ travel.image.url }}" alt="" class="feature-image travel_icon">
-                        <h2 class="feature-title">{{ travel.title }}</h2>
+                        <h2 class="feature-title">{% translate travel.title %}</h2>
                         <h3>{{travel.get_departure_info}}</h3>
-                        <p>Narxi : {{ travel.price }}$</p>
-                        <a href="{% url 'account:register' travel.id %}" class="button">Ro'yxatdan O'tish</a>
+                        <p>{% translate "Narxi :" %} {{ travel.price }}$</p>
+                        <a href="{% url 'account:register' travel.id %}" class="button">{% translate "Ro'yxatdan O'tish" %}</a>
                     </div>
                 </div>
                 {% endfor %}
@@ -91,17 +88,17 @@ Rayhon - Bosh Sahifa
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
-                    <h2 class="section-title">Bizning missiyamiz</h2>
-                    <p>Rayhon Travel bizning vazifamiz muqaddas Makka va Madina shaharlariga uzluksiz va ma'naviy jihatdan boyituvchi ziyorat qilishga yordam berishdir. Biz Umraning imonlilar hayotidagi chuqur ahamiyatini tushunamiz va sayohatingizning har bir jihati juda ehtiyotkorlik bilan rejalashtirilishi va amalga oshirilishini ta'minlashga intilamiz.</p>
-                    <p>Tajribali mutaxassislarimizdan iborat jamoamiz Umra sayohatining nozik tomonlarini chuqur tushunadi. Biz sizga sayohatingizning har bir bosqichida mutaxassis ko'rsatmalari va yordamini taqdim etamiz.</p>
+                    <h2 class="section-title">{% translate "Bizning missiyamiz" %}</h2>
+                    <p>{% translate "Rayhon Travel bizning vazifamiz muqaddas Makka va Madina shaharlariga uzluksiz va ma'naviy jihatdan boyituvchi ziyorat qilishga yordam berishdir. Biz Umraning imonlilar hayotidagi chuqur ahamiyatini tushunamiz va sayohatingizning har bir jihati juda ehtiyotkorlik bilan rejalashtirilishi va amalga oshirilishini ta'minlashga intilamiz." %}</p>
+                    <p>{% translate "Tajribali mutaxassislarimizdan iborat jamoamiz Umra sayohatining nozik tomonlarini chuqur tushunadi. Biz sizga sayohatingizning har bir bosqichida mutaxassis ko'rsatmalari va yordamini taqdim etamiz." %}</p>
                 </div>
                 <div class="col-md-4">
-                    <h2 class="section-title">Nima uchun aynan biz ?</h2>
+                    <h2 class="section-title">{% translate "Nima uchun RayhonTour ?" %}</h2>
                     <ul class="arrow-list has-border">
-                        <li>Tajribali mutaxassislardan iborat jamoa</li>
-                        <li>Mijozlarga yo'naltirilgan yondashuv</li>
-                        <li>Moslashtirilgan paketlar</li>
-                        <li>Sifatli turar joy</li>
+                        <li>{% translate "Tajribali mutaxassislardan iborat jamoa" %}</li>
+                        <li>{% translate "Mijozlarga yo'naltirilgan yondashuv" %}</li>
+                        <li>{% translate "Moslashtirilgan paketlar" %}</li>
+                        <li>{% translate "Sifatli turar joy" %}</li>
                     </ul>
                 </div>
             </div>
@@ -111,9 +108,9 @@ Rayhon - Bosh Sahifa
     <div class="fullwidth-block" data-bg-image="{% static 'images/cta-bg.jpg' %}">
         <div class="container">
             <ul class="box_of_liis">
-                <li><p>“Allohning mehmonlari uchtadir: G‘ozi, Hoji va Mo‘tamir(Umra)” - (Sunan Ibn Moja)</p></li>
-                <li><p>“Kim haj qilsa, gunoh va fahsh qilmasa, onasi tuqqan kundagidek (gunohsiz) qaytadi” - (Sahih al-Buxoriy)</p></li>
-                <li><p>“Kimki haj qilsa va (xotini bilan) yaqinlik qilmasa, gunoh qilmasa va nohaq janjal qilmasa, hajdan onasi tuqqan kundagidek gunohlardan pok qaytadi" - (Sahih al-Buxoriy)</p></li>
+                <li><p>{% translate "“Allohning mehmonlari uchtadir: G‘ozi, Hoji va Mo‘tamir(Umra)” - (Sunan Ibn Moja)" %}</p></li>
+                <li><p>{% translate "“Kim haj qilsa, gunoh va fahsh qilmasa, onasi tuqqan kundagidek (gunohsiz) qaytadi” - (Sahih al-Buxoriy)" %}</p></li>
+                <li><p>{% translate "“Kimki haj qilsa va (xotini bilan) yaqinlik qilmasa, gunoh qilmasa va nohaq janjal qilmasa, hajdan onasi tuqqan kundagidek gunohlardan pok qaytadi” - (Sahih al-Buxoriy)" %}</p></li>
             </ul>
   
         </div>
