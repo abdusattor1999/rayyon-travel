@@ -170,8 +170,9 @@ LOCALE_PATHS = os.path.join(BASE_DIR, "locale/"),
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 STATIC_URL = 'static/'
-STATIC_DIRS = [str(BASE_DIR.joinpath('static'))]
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static/')]
+STATIC_ROOT = 'assets/'
+# STATIC_DIRS = [str(BASE_DIR.joinpath('static'))]
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static/')]
 MEDIA_URL = 'media/'
 MEDIA_ROOT = 'media/'
 
