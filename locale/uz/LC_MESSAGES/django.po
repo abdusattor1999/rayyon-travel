@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-22 10:51+0500\n"
+"POT-Creation-Date: 2023-10-24 22:53+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1225,35 +1225,34 @@ msgstr ""
 msgid "Connect, get help, or contribute"
 msgstr ""
 
-#: .\Templates\about_page.html:6
-msgid "Rayhon - Biz haqimizda"
-msgstr ""
-
-#: .\Templates\about_page.html:18 .\Templates\contact_page.html:18
-#: .\Templates\home_page.html:20 .\Templates\notifications.html:25
-#: .\Templates\post_details.html:18 .\Templates\post_list.html:18
-#: .\Templates\register_form.html:20
-msgid "Travel Agency"
-msgstr ""
-
-#: .\Templates\about_page.html:25 .\Templates\contact_page.html:25
-#: .\Templates\home_page.html:27 .\Templates\notifications.html:32
+#: .\Templates\about_page.html:6 .\Templates\about_page.html:25
+#: .\Templates\contact_page.html:25 .\Templates\home_page.html:27
+#: .\Templates\login_form.html:25 .\Templates\notifications.html:32
 #: .\Templates\post_details.html:25 .\Templates\post_list.html:25
 #: .\Templates\register_form.html:27
 msgid "Biz haqimizda"
 msgstr ""
 
+#: .\Templates\about_page.html:18 .\Templates\contact_page.html:18
+#: .\Templates\home_page.html:20 .\Templates\login_form.html:18
+#: .\Templates\notifications.html:25 .\Templates\post_details.html:18
+#: .\Templates\post_list.html:18 .\Templates\register_form.html:20
+msgid "Travel Agency"
+msgstr ""
+
 #: .\Templates\about_page.html:26 .\Templates\contact_page.html:26
 #: .\Templates\contact_page.html:37 .\Templates\home_page.html:28
+#: .\Templates\login_form.html:26 .\Templates\login_form.html:37
 #: .\Templates\notifications.html:33 .\Templates\post_details.html:26
 #: .\Templates\post_list.html:26 .\Templates\register_form.html:28
 msgid "Bog'lanish"
 msgstr ""
 
 #: .\Templates\about_page.html:27 .\Templates\contact_page.html:27
-#: .\Templates\home_page.html:29 .\Templates\notifications.html:34
-#: .\Templates\post_details.html:27 .\Templates\post_list.html:27
-#: .\Templates\post_list.html:45 .\Templates\register_form.html:29
+#: .\Templates\home_page.html:29 .\Templates\login_form.html:27
+#: .\Templates\notifications.html:34 .\Templates\post_details.html:27
+#: .\Templates\post_list.html:27 .\Templates\post_list.html:45
+#: .\Templates\register_form.html:29
 msgid "Yangiliklar"
 msgstr ""
 
@@ -1261,37 +1260,37 @@ msgstr ""
 msgid "Nima uchun aynan biz ?"
 msgstr ""
 
-#: .\Templates\about_page.html:50 .\Templates\home_page.html:99
-msgid "Tajribali mutaxassislardan iborat jamoa"
+#: .\Templates\about_page.html:50
+msgid "Tajribali Yo'lboshchilar"
 msgstr ""
 
 #: .\Templates\about_page.html:51
 msgid ""
-"Jamoamiz Umra sayohatining nozik tomonlarini chuqur tushunadi. Biz sizga "
-"sayohatingizning har bir bosqichida mutaxassis ko'rsatmalari va yordamini "
-"taqdim etamiz."
+"Jamoamiz sayohatingizning nozik tomonlarini chuqur tushunadi. Biz sizga "
+"sayohatning har bir bosqichida mutaxassis ko'rsatmalari va yordamini taqdim "
+"etamiz."
 msgstr ""
 
-#: .\Templates\about_page.html:54 .\Templates\home_page.html:101
+#: .\Templates\about_page.html:54 .\Templates\home_page.html:103
 msgid "Moslashtirilgan paketlar"
 msgstr ""
 
 #: .\Templates\about_page.html:55
 msgid ""
 "Biz sizning maxsus ehtiyojlaringiz va hoxishlaringizni qondirish uchun "
-"mo'ljallangan bir qator Umra paketlarini taklif qilamiz. Byudjetga mos "
+"mo'ljallangan bir qator sayohat paketlarini taklif qilamiz. Byudjetga mos "
 "variantnimi yoki hashamatlini qidirasizmi bu sizning tanlovingiz."
 msgstr ""
 
-#: .\Templates\about_page.html:58 .\Templates\home_page.html:100
+#: .\Templates\about_page.html:58 .\Templates\home_page.html:102
 msgid "Mijozlarga yo'naltirilgan yondashuv"
 msgstr ""
 
 #: .\Templates\about_page.html:59
 msgid ""
-"Sizning mamnunligingiz bizning ustuvor vazifamizdir. Umra tajribangiz "
-"nafaqat silliq, balki ma’naviy jihatdan ham ko‘tarinki bo‘lishini ta’minlash "
-"uchun qo‘shimcha milyani bosib o‘tamiz."
+"Sizning mamnunligingiz bizning ustuvor vazifamizdir. Sayohatingiz nafaqat "
+"silliq, balki ma’naviy jihatdan ham ko‘tarinki bo‘lishini ta’minlash uchun "
+"qo‘shimcha milyani bosib o‘tamiz."
 msgstr ""
 
 #: .\Templates\about_page.html:73
@@ -1300,10 +1299,9 @@ msgstr ""
 
 #: .\Templates\about_page.html:74
 msgid ""
-"Muqaddas Umra safarini amalga oshirishdagi ishonchli hamkoringiz Rayhon "
-"tourga xush kelibsiz. Mukammallikka bo'lgan ishtiyoq va xizmatga sodiqlik "
-"bilan biz Umra tajribangizni chinakam esda qolarli qilish uchun harakat "
-"qilamiz."
+"Sayohatlarni amalga oshirishdagi ishonchli hamkoringiz Rayhon tourga xush "
+"kelibsiz. Mukammallikka bo'lgan ishtiyoq va xizmatga sodiqlik bilan biz "
+"sayohatingizni chinakam esda qolarli qilish uchun harakat qilamiz."
 msgstr ""
 
 #: .\Templates\about_page.html:77
@@ -1312,20 +1310,20 @@ msgstr ""
 
 #: .\Templates\about_page.html:78
 msgid ""
-"Rayhon tourda biz halollik, shaffoflik va mijozlar ehtiyojini qondirishga "
+"Rayhon tourda biz shaffoflik va mijozlar ehtiyojini qondirishga "
 "sodiqligimizdan faxrlanamiz. Biz barcha qoidalar va standartlarga rioya "
-"qilamiz va bizning maqsadimiz biz yordam bergan har bir ibodatda sizning "
+"qilamiz va bizning maqsadimiz biz yordam bergan har bir sayohatda sizning "
 "kutganingizdan oshig'ini berish."
 msgstr ""
 
-#: .\Templates\about_page.html:84 .\Templates\home_page.html:102
+#: .\Templates\about_page.html:84 .\Templates\home_page.html:104
 msgid "Sifatli turar joy"
 msgstr ""
 
 #: .\Templates\about_page.html:85
 msgid ""
-"Biz Harami Sharif yaqinidagi eng yaxshi mehmonxonalar bilan hamkorlik qilib, "
-"ziyoratingiz davomida shinam va qulay yashashingizni ta'minlaymiz."
+"Biz eng yaxshi mehmonxonalar bilan hamkorlik qilib, sayohatingiz davomida "
+"shinam va qulay yashashingizni ta'minlaymiz."
 msgstr ""
 
 #: .\Templates\about_page.html:89
@@ -1334,33 +1332,24 @@ msgstr ""
 
 #: .\Templates\about_page.html:90
 msgid ""
-"Bizning jamoamiz sayohatingiz davomida ma'naviy yo'l-yo'riq ko'rsatish, Umra "
-"marosimlarini fidoyilik va tushunish bilan bajarishingizga yordam berishga "
-"harakat qiladi."
+"Bizning jamoamiz sayohatingiz davomida ma'naviy yo'l-yo'riq ko'rsatish, "
+"Sayohat taasurotlarini his qilishingizga yordam beradi."
 msgstr ""
 
 #: .\Templates\base.html:12
 msgid "Rayhon-tour"
 msgstr ""
 
-#: .\Templates\base.html:42
+#: .\Templates\base.html:40
 msgid "Bizning Manzil"
 msgstr ""
 
-#: .\Templates\base.html:43 .\Templates\contact_page.html:50
+#: .\Templates\base.html:41 .\Templates\contact_page.html:50
 msgid "Namangan Shahar G'isht ko'prik, Uychi ko'cha 3."
 msgstr ""
 
-#: .\Templates\base.html:51
+#: .\Templates\base.html:49
 msgid "Ijtimoiy Tarmoqlar"
-msgstr ""
-
-#: .\Templates\base.html:63
-msgid "Til almashtirish"
-msgstr ""
-
-#: .\Templates\base.html:77
-msgid "Created by"
 msgstr ""
 
 #: .\Templates\contact_page.html:6
@@ -1371,7 +1360,7 @@ msgstr ""
 msgid "Manzil"
 msgstr ""
 
-#: .\Templates\contact_page.html:56
+#: .\Templates\contact_page.html:56 .\Templates\contact_page.html:74
 msgid "Telefon"
 msgstr ""
 
@@ -1391,69 +1380,88 @@ msgstr ""
 msgid "Asosiy"
 msgstr ""
 
+#: .\Templates\contact_page.html:73
+msgid "Ism va Familiya"
+msgstr ""
+
+#: .\Templates\contact_page.html:78
+msgid "Xabar qoldiring ..."
+msgstr ""
+
+#: .\Templates\contact_page.html:81 .\Templates\register_form.html:49
+msgid "Yuborish"
+msgstr ""
+
 #: .\Templates\home_page.html:6
 msgid "Rayhon - Bosh Sahifa"
 msgstr ""
 
-#: .\Templates\home_page.html:43 .\Templates\home_page.html:51
-#: .\Templates\home_page.html:59
-msgid "Umra ziyoratlari biz bilan qulay"
+#: .\Templates\home_page.html:45 .\Templates\home_page.html:53
+#: .\Templates\home_page.html:61
+msgid "Horijiy va Mahalliy sayohatlar biz bilan qulay"
 msgstr ""
 
-#: .\Templates\home_page.html:44 .\Templates\home_page.html:52
-#: .\Templates\home_page.html:60
+#: .\Templates\home_page.html:46 .\Templates\home_page.html:54
+#: .\Templates\home_page.html:62
 msgid "Safarda sizga huzur, xizmatingizda Rayhontour !"
 msgstr ""
 
-#: .\Templates\home_page.html:77
+#: .\Templates\home_page.html:79
 msgid "Narxi :"
 msgstr ""
 
-#: .\Templates\home_page.html:78
-msgid "Ro'yxatdan O'tish"
-msgstr ""
-
-#: .\Templates\home_page.html:92
-msgid "Bizning missiyamiz"
-msgstr ""
-
-#: .\Templates\home_page.html:93
-msgid ""
-"Rayhon Travel bizning vazifamiz muqaddas Makka va Madina shaharlariga "
-"uzluksiz va ma'naviy jihatdan boyituvchi ziyorat qilishga yordam berishdir. "
-"Biz Umraning imonlilar hayotidagi chuqur ahamiyatini tushunamiz va "
-"sayohatingizning har bir jihati juda ehtiyotkorlik bilan rejalashtirilishi "
-"va amalga oshirilishini ta'minlashga intilamiz."
+#: .\Templates\home_page.html:80
+msgid "Buyurtma berish"
 msgstr ""
 
 #: .\Templates\home_page.html:94
-msgid ""
-"Tajribali mutaxassislarimizdan iborat jamoamiz Umra sayohatining nozik "
-"tomonlarini chuqur tushunadi. Biz sizga sayohatingizning har bir bosqichida "
-"mutaxassis ko'rsatmalari va yordamini taqdim etamiz."
+msgid "Bizning missiyamiz"
 msgstr ""
 
-#: .\Templates\home_page.html:97
+#: .\Templates\home_page.html:95
+msgid ""
+"Rayhon Travel bizning vazifamiz qadimiy va zamonaviy shaharlarga sayyohlarni "
+"borishlarini oson va qulay qilish. Biz sayohatning insonlar hayotidagi "
+"chuqur ahamiyatini tushunamiz va sayohatingizning har bir jihati juda "
+"ehtiyotkorlik bilan rejalashtirilishi va amalga oshirilishini ta'minlashga "
+"intilamiz."
+msgstr ""
+
+#: .\Templates\home_page.html:96
+msgid ""
+"Tajribali mutaxassislarimizdan iborat jamoamiz sayohatning nozik tomonlarini "
+"chuqur tushunadi. Biz sizga sayohatingizning har bir bosqichida "
+"yo'lboshchilar ko'rsatmalari va yordamini taqdim etamiz."
+msgstr ""
+
+#: .\Templates\home_page.html:99
 msgid "Nima uchun RayhonTour ?"
 msgstr ""
 
-#: .\Templates\home_page.html:112
-msgid ""
-"“Allohning mehmonlari uchtadir: G‘ozi, Hoji va Mo‘tamir(Umra)” - (Sunan Ibn "
-"Moja)"
-msgstr ""
-
-#: .\Templates\home_page.html:113
-msgid ""
-"“Kim haj qilsa, gunoh va fahsh qilmasa, onasi tuqqan kundagidek (gunohsiz) "
-"qaytadi” - (Sahih al-Buxoriy)"
+#: .\Templates\home_page.html:101
+msgid "Tajribali mutaxassislardan iborat jamoa"
 msgstr ""
 
 #: .\Templates\home_page.html:114
 msgid ""
-"“Kimki haj qilsa va (xotini bilan) yaqinlik qilmasa, gunoh qilmasa va nohaq "
-"janjal qilmasa, hajdan onasi tuqqan kundagidek gunohlardan pok qaytadi” - "
-"(Sahih al-Buxoriy)"
+"“Sayohat sizni turli madaniyatlar, odamlar va turmush tarzi bilan "
+"tanishtiradi, dunyoqarashingiz va tushunchangizni kengaytiradi.”"
+msgstr ""
+
+#: .\Templates\home_page.html:115
+msgid ""
+"“Sayohat odatdagidan qochish va dam olish imkoniyatini beradi, stressni "
+"kamaytiradi va ruhiy farovonlikni yaxshilaydi.”"
+msgstr ""
+
+#: .\Templates\home_page.html:116
+msgid ""
+"“Sayohat sizga yangi madaniyatlarga sho'ng'ish, bag'rikenglik, hamdardlik va "
+"turli an'ana va urf-odatlarni chuqurroq tushunish imkonini beradi.”"
+msgstr ""
+
+#: .\Templates\login_form.html:6 .\Templates\login_form.html:52
+msgid "Tizimga kirish"
 msgstr ""
 
 #: .\Templates\notifications.html:7
@@ -1476,7 +1484,7 @@ msgstr ""
 msgid "Rayhon"
 msgstr ""
 
-#: .\Templates\post_details.html:51
+#: .\Templates\post_details.html:58
 msgid "Ko'rishlar"
 msgstr ""
 
@@ -1492,31 +1500,36 @@ msgstr ""
 msgid "Ro'yxat"
 msgstr ""
 
-#: .\Templates\register_form.html:48
-msgid "Yuborish"
-msgstr ""
-
-#: .\account\models.py:6
+#: .\account\models.py:6 .\account\models.py:19
 msgid "To'liq ism sharif"
 msgstr ""
 
-#: .\account\models.py:7
+#: .\account\models.py:7 .\account\models.py:20
 msgid "Telefon raqami"
 msgstr ""
 
-#: .\account\views.py:29
+#: .\account\views.py:63
 msgid "Arizangiz yuborildi tez orada aloqaga chiqamiz !"
 msgstr ""
 
-#: .\config\settings.py:131
+#: .\account\views.py:69
+#, python-brace-format
+msgid "Berilgan {pk} id raqamli obyekt mavjud emas !"
+msgstr ""
+
+#: .\config\settings.py:149
 msgid "O'zbek"
 msgstr ""
 
-#: .\config\settings.py:132
+#: .\config\settings.py:150
 msgid "Russian"
 msgstr ""
 
-#: .\posts\models.py:8 .\posts\models.py:25
+#: .\config\settings.py:151
+msgid "English"
+msgstr ""
+
+#: .\posts\models.py:8 .\posts\models.py:35
 msgid "Sarlavha"
 msgstr ""
 
@@ -1540,22 +1553,22 @@ msgstr ""
 msgid "Hozir mavjudmi"
 msgstr ""
 
-#: .\posts\models.py:26
+#: .\posts\models.py:36
 msgid "1 - Qism"
 msgstr ""
 
-#: .\posts\models.py:27
+#: .\posts\models.py:37
 msgid "2 - Qism"
 msgstr ""
 
-#: .\posts\models.py:30
+#: .\posts\models.py:40
 msgid "Ko'rishlar soni"
 msgstr ""
 
-#: .\posts\views.py:34
+#: .\posts\views.py:35
 msgid "'Ism-Familiya' va 'Telefon' kiritilishi kerak !"
 msgstr ""
 
-#: .\posts\views.py:71
+#: .\posts\views.py:75
 msgid "Berilgan ID raqamli Yangilik mavjud emas !"
 msgstr ""

@@ -63,6 +63,10 @@
 										<a href="/{{lang.code}}/">  
 											<img class="language_button" src="{% static 'img/rus.png' %}" alt="">
 										</a>
+										{% elif lang.code == 'en' %}
+										<a href="/{{lang.code}}/">  
+											<img class="language_button" src="{% static 'img/usa.png' %}" alt="">
+										</a>
 										{% else %}
 										<a href="/{{lang.code}}/"> 
 											<img class="language_button" src="{% static 'img/uzb.png' %}" alt="">
@@ -70,7 +74,7 @@
 										{% endif %}
 									
 									  {% endfor %}
-									</div>
+									</div><br>
 									{% if request.user.is_authenticated %}
 									<a href="/contexts/" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Language Dictionary <i class="fa fa-arrow-right ms-3"></i></a><br>    
 										<a href="/myadmin/" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Dashboard <i class="fa fa-arrow-right ms-3"></i></a>    

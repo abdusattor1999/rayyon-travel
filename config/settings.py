@@ -143,14 +143,17 @@ CSRF_TRUSTED_ORIGINS = [
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
 from django.utils.translation import gettext_lazy as _
+
+LANGUAGE_CODE = 'uz'
 LANGUAGES = [
     ('uz', _("O'zbek")),
-    ('ru', _('Russian'))
+    ('ru', _('Russian')),
+    ('en', _('English')),
+
 ]
-LANGUAGE_CODE = 'uz'
+
 
 TIME_ZONE = 'Asia/Tashkent'
-
 USE_I18N = True
 
 USE_TZ = True

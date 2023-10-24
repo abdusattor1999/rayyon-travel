@@ -36,26 +36,27 @@
 
 <div class="hero">
     <ul class="slides">
-        <li data-bg-image="{% static 'img/umra3.jpg' %}">
+        {% comment %} <li data-bg-image="{% static 'img/umra3.jpg' %}"> {% endcomment %}
+        <li data-bg-image="{% static 'https://c4.wallpaperflare.com/wallpaper/975/804/910/bali-island-ocean-bungalows-wallpaper-preview.jpg' %}">
             <div class="container">
                 <div class="slide-content">
-                    <h2 class="slide-title">{% translate "Umra ziyoratlari biz bilan qulay" %}</h2>
+                    <h2 class="slide-title">{% translate "Horijiy va Mahalliy sayohatlar biz bilan qulay" %}</h2>
                     <p>{% translate "Safarda sizga huzur, xizmatingizda Rayhontour !" %}</p>
                 </div>
             </div>
         </li>
-        <li data-bg-image="{% static 'img/umra2.jpg' %}">
+        <li data-bg-image="{% static 'https://i.pinimg.com/originals/0d/01/6c/0d016c1d4607b0c5cbe88174b037be86.jpg' %}">
             <div class="container">
                 <div class="slide-content">
-                    <h2 class="slide-title">{% translate "Umra ziyoratlari biz bilan qulay" %}</h2>
+                    <h2 class="slide-title">{% translate "Horijiy va Mahalliy sayohatlar biz bilan qulay" %}</h2>
                     <p>{% translate "Safarda sizga huzur, xizmatingizda Rayhontour !" %}</p>
                 </div>
             </div>
         </li>
-        <li data-bg-image="{% static 'img/arofat1.jpg' %}">
+        <li data-bg-image="{% static 'https://c0.wallpaperflare.com/preview/871/565/94/uzbekistan-samarkand.jpg' %}">
             <div class="container">
                 <div class="slide-content">
-                    <h2 class="slide-title">{% translate "Umra ziyoratlari biz bilan qulay" %}</h2>
+                    <h2 class="slide-title">{% translate "Horijiy va Mahalliy sayohatlar biz bilan qulay" %}</h2>
                     <p>{% translate "Safarda sizga huzur, xizmatingizda Rayhontour !" %}</p>
                 </div>
             </div>
@@ -74,7 +75,7 @@
                         <h2 class="feature-title">{% translate travel.title %}</h2>
                         <h3>{{travel.get_departure_info}}</h3>
                         <p>{% translate "Narxi :" %} {{ travel.price }}$</p>
-                        <a href="{% url 'account:register' travel.id %}" class="button">{% translate "Ro'yxatdan O'tish" %}</a>
+                        <a href="{% url 'account:register' travel.id %}" class="button">{% translate "Buyurtma berish" %}</a>
                     </div>
                 </div>
                 {% endfor %}
@@ -89,8 +90,8 @@
             <div class="row">
                 <div class="col-md-8">
                     <h2 class="section-title">{% translate "Bizning missiyamiz" %}</h2>
-                    <p>{% translate "Rayhon Travel bizning vazifamiz muqaddas Makka va Madina shaharlariga uzluksiz va ma'naviy jihatdan boyituvchi ziyorat qilishga yordam berishdir. Biz Umraning imonlilar hayotidagi chuqur ahamiyatini tushunamiz va sayohatingizning har bir jihati juda ehtiyotkorlik bilan rejalashtirilishi va amalga oshirilishini ta'minlashga intilamiz." %}</p>
-                    <p>{% translate "Tajribali mutaxassislarimizdan iborat jamoamiz Umra sayohatining nozik tomonlarini chuqur tushunadi. Biz sizga sayohatingizning har bir bosqichida mutaxassis ko'rsatmalari va yordamini taqdim etamiz." %}</p>
+                    <p>{% translate "Rayhon Travel bizning vazifamiz qadimiy va zamonaviy shaharlarga sayyohlarni borishlarini oson va qulay qilish. Biz sayohatning insonlar hayotidagi chuqur ahamiyatini tushunamiz va sayohatingizning har bir jihati juda ehtiyotkorlik bilan rejalashtirilishi va amalga oshirilishini ta'minlashga intilamiz." %}</p>
+                    <p>{% translate "Tajribali mutaxassislarimizdan iborat jamoamiz sayohatning nozik tomonlarini chuqur tushunadi. Biz sizga sayohatingizning har bir bosqichida yo'lboshchilar ko'rsatmalari va yordamini taqdim etamiz." %}</p>
                 </div>
                 <div class="col-md-4">
                     <h2 class="section-title">{% translate "Nima uchun RayhonTour ?" %}</h2>
@@ -108,9 +109,9 @@
     <div class="fullwidth-block" data-bg-image="{% static 'images/cta-bg.jpg' %}">
         <div class="container">
             <ul class="box_of_liis">
-                <li><p>{% translate "“Allohning mehmonlari uchtadir: G‘ozi, Hoji va Mo‘tamir(Umra)” - (Sunan Ibn Moja)" %}</p></li>
-                <li><p>{% translate "“Kim haj qilsa, gunoh va fahsh qilmasa, onasi tuqqan kundagidek (gunohsiz) qaytadi” - (Sahih al-Buxoriy)" %}</p></li>
-                <li><p>{% translate "“Kimki haj qilsa va (xotini bilan) yaqinlik qilmasa, gunoh qilmasa va nohaq janjal qilmasa, hajdan onasi tuqqan kundagidek gunohlardan pok qaytadi” - (Sahih al-Buxoriy)" %}</p></li>
+                <li><p>{% translate "“Sayohat sizni turli madaniyatlar, odamlar va turmush tarzi bilan tanishtiradi, dunyoqarashingiz va tushunchangizni kengaytiradi.”" %}</p></li>
+                <li><p>{% translate "“Sayohat odatdagidan qochish va dam olish imkoniyatini beradi, stressni kamaytiradi va ruhiy farovonlikni yaxshilaydi.”" %}</p></li>
+                <li><p>{% translate "“Sayohat sizga yangi madaniyatlarga sho'ng'ish, bag'rikenglik, hamdardlik va turli an'ana va urf-odatlarni chuqurroq tushunish imkonini beradi.”" %}</p></li>
             </ul>
   
         </div>
